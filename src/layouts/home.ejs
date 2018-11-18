@@ -8,14 +8,22 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+
+  <%= console.log(site) %>
+  <%= console.log('+~+~+~+~+~+~+~+~+~+~+~+~+~+') %>
+  <%= console.log(page) %>
+  <%= console.log('+~+~+~+~+~+~+~+~+~+~+~+~+~+') %>
+  <%= console.log(pages) %>
+
+
+
   <div class="header">
     <h1><%= site.title %></h1>
   </div>
 
   <h2><%= page.title %></h2>
 
-  <img src="<%= pages[3].media[2] %>" alt="">
-
+  <h1>THIS IS THE HOME TEMPLATE!</h1>
 
   <ul>
     <% page.media.forEach(function(media){ %>
