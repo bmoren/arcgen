@@ -33,8 +33,10 @@
 
   <ul>
     <% pages.forEach(function(page){ %>
-      <li><a href="<%= page.url %>"> <%= page.title %> </a></li>
-    <% }); %>
+      <% if(page.depth == 1){ %>
+        <li><a href="<%= page.url %>"> <%= page.title %> </a></li>
+
+    <%} }); %>
   </ul>
 
   <div class="content">

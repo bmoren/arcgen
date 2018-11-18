@@ -16,6 +16,14 @@ Minimalist static site generator, powered by [Node.js](https://nodejs.org/en/)
 * It can read site metadata from a global file and have specific data for individual pages.
 * Allow partials (blocks of reusable interface components)
 
+### custom MCAD features!
+* copies local media to exact locations in the build process
+* `page` is available in your template to get access to the current page's front matter & a list of local media as absolute files.
+* generates a `pages` object, available in your template, containing all of the pages definitions across the entire site. The `pages` object has a few reserved keys you should not use in your front matter (they will be overwritten)
+    * `url` – the url to the page
+    * `media` – an array of absolute paths to the media files associate with this page
+    * `depth` – the depth of this page in the folder structure
+
 
 ## Getting started
 
@@ -67,7 +75,7 @@ There is already a default layout inside the `layouts` folder, but you may add m
 
 Read more about [Layouts](https://doug2k1.github.io/nanogen/docs/#layouts).
 
-Inside the `pages` folder is where you put ejs, md or html files that will generate the pages of the final site. Any file name and folder structure used here will be transposed to the resulting site (without the `pages` part). 
+Inside the `pages` folder is where you put ejs, md or html files that will generate the pages of the final site. Any file name and folder structure used here will be transposed to the resulting site (without the `pages` part).
 
 Read more about [Pages](https://doug2k1.github.io/nanogen/docs/#pages).
 
