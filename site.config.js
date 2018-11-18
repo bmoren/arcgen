@@ -4,7 +4,7 @@ module.exports = {
     outputPath: './public'
   },
   site: {
-    title: 'Nanogen',
+    title: 'MCADgen',
     description: 'Minimalist static site generator in Node.js',
     basePath: process.env.NODE_ENV === 'production' ? '' : ''
   }
