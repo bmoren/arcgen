@@ -1,6 +1,6 @@
 {
   "name": "mcadgen",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Minimalist static site generator in Node.js based on nanogen",
   "repository": "https://github.com/mediaupstream/nanogen/tree/page-defs-plus-specific-media",
   "keywords": [
