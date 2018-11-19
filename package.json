@@ -10,7 +10,7 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "bin": {
-    "nanogen": "./lib/cli.js"
+    "mcadgen": "./lib/cli.js"
   },
   "files": [
     "lib",
