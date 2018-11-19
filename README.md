@@ -1,29 +1,22 @@
-# Nanogen
+# mcadgen
 
-[![npm](https://img.shields.io/npm/v/nanogen.svg)](https://www.npmjs.com/package/nanogen)
-[![Build Status](https://travis-ci.org/doug2k1/nanogen.svg?branch=cli)](https://travis-ci.org/doug2k1/nanogen)
-[![Maintainability](https://api.codeclimate.com/v1/badges/ab96ad49962fca4a6f2e/maintainability)](https://codeclimate.com/github/doug2k1/nanogen/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/ab96ad49962fca4a6f2e/test_coverage)](https://codeclimate.com/github/doug2k1/nanogen/test_coverage)
+[![npm](https://img.shields.io/npm/v/mcadgen.svg)](https://www.npmjs.com/package/mcadgen)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/doug2k1/nanogen-template)
-
-Minimalist static site generator, powered by [Node.js](https://nodejs.org/en/)
+Minimalist static site generator, powered by  [Node.js](https://nodejs.org/en/) & [nanogen](https://github.com/doug2k1/nanogen/) for use in [MCAD](http://mcad.edu) web & screen classes.
 
 ## Features
-
 * Generate HTML pages from [EJS](http://ejs.co/) and/or Markdown files.
 * The site can have a global layout (the common header, navigation, footer) and some pages may have a specific one.
 * It can read site metadata from a global file and have specific data for individual pages.
 * Allow partials (blocks of reusable interface components)
 
-### custom MCAD features!
+#### mcadgen expands upon nanogen with the following:
 * copies local media to exact locations in the build process
 * `page` is available in your template to get access to the current page's front matter & a list of local media as absolute files.
 * generates a `pages` object, available in your template, containing all of the pages definitions across the entire site. The `pages` object has a few reserved keys you should not use in your front matter (they will be overwritten)
     * `url` – the url to the page
-    * `media` – an array of absolute paths to the media files associate with this page
-    * `depth` – the depth of this page in the folder structure
-
+    * `media` – an array of absolute paths to the media files associated with each page
+    * `depth` – the depth of each page in the folder structure
 
 ## Getting started
 
@@ -36,13 +29,13 @@ Minimalist static site generator, powered by [Node.js](https://nodejs.org/en/)
 You may install it globally with:
 
 ```
-npm i -g nanogen
+npm i -g mcadgen
 ```
 
 Or run the cli directly with npx (available with npm 5.2 or above):
 
 ```
-npx nanogen <command>
+npx mcadgen <command>
 ```
 
 ### Creating a new site
@@ -50,7 +43,7 @@ npx nanogen <command>
 To create a brand new site, navigate to the folder you want your site to be and run:
 
 ```
-nanogen init
+mcadgen init
 ```
 
 This will create a initial site structure like this:
@@ -68,7 +61,7 @@ This will create a initial site structure like this:
 To build the site and open it in a browser, run:
 
 ```
-npm start
+mcadgen start
 ```
 
 There is already a default layout inside the `layouts` folder, but you may add more.
@@ -81,39 +74,36 @@ Read more about [Pages](https://doug2k1.github.io/nanogen/docs/#pages).
 
 ## Available commands and options
 
-You may run `nanogen -h` to see the available commands and options:
+You may run `mcadgen -h` to see the available commands and options:
 
 ```
   Initialize a new site:
 
-    $ nanogen init
+    $ mcadgen init
 
   Start the current site:
 
-    $ nanogen start [options]
+    $ mcadgen start [options]
 
   Build the current site:
 
-    $ nanogen build [options]
+    $ mcadgen build [options]
 
   Options
     -c, --config <file-path>  Path to the config file (default: site.config.js)
     -p, --port <port-number>  Port to use for local server (default: 3000)
 
     -h, --help                Display this help text
-    -v, --version             Display Nanogen version
+    -v, --version             Display mcadgen version
 ```
 
 ## Docs
 
-[Read the full documentation](https://doug2k1.github.io/nanogen)
+[Read the full documentation for nanogen](https://doug2k1.github.io/nanogen)
 
 ## Authors
-
+* **Derek Anderson && Ben Moren** – mcadgen
 * **Douglas Matoso** - *Initial work* - [doug2k1](https://github.com/doug2k1)
 
-See also the list of [contributors](https://github.com/doug2k1/nanogen/contributors) who participated in this project.
-
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
