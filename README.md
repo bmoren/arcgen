@@ -104,7 +104,7 @@ You may run `mcadgen -h` to see the available commands and options:
 ## Running from a sub directory
 MCADgen is intended to be used at the root of your site '/'. It's not advised but you can use it in a sub directory with the following steps:
 + upload your files to a subdirectory
-+ [https://teamtreehouse.com/library/how-to-create-and-edit-an-htaccess-file](create a .htaccess file) (or modify the existing one) at the root subdirectory
++ [create a .htaccess file](https://teamtreehouse.com/library/how-to-create-and-edit-an-htaccess-file) (or modify the existing one) at the root subdirectory
 + add the rewrite settings below, while changing the subdirectory name (`coolsite`) to the appropriate sub directory name, and changing the url to your own url including the sub directory.
 
 ```
