@@ -5,7 +5,6 @@ module.exports = {
   },
   site: {
     title: 'MCADgen',
-    description: 'Minimalist static site generator in Node.js',
-    basePath: process.env.NODE_ENV === 'production' ? '' : ''
-  }
+    description: 'Minimalist static site generator in Node.js'
+    }
 };

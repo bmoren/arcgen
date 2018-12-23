@@ -101,6 +101,20 @@ You may run `mcadgen -h` to see the available commands and options:
 
 [Read the full documentation for nanogen](https://doug2k1.github.io/nanogen)
 
+## Running from a sub directory
+MCADgen is intended to be used at the root of your site '/'. It's not advised but you can use it in a sub directory with the following steps:
++ upload your files to a subdirectory
++ [https://teamtreehouse.com/library/how-to-create-and-edit-an-htaccess-file](create a .htaccess file) (or modify the existing one) at the root subdirectory
++ add the rewrite settings below, while changing the subdirectory name (`coolsite`) to the appropriate sub directory name, and changing the url to your own url including the sub directory.
+
+```
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} ^http://mygreaturl.com/coolsite/
+RewriteCond %{REQUEST_URI} !^/coolsite/
+RewriteRule (.*) /coolsite/$1 [L,QSA]
+```
+
 ## Authors
 * **Derek Anderson && Ben Moren** – mcadgen
 * **Douglas Matoso** - *Initial work* - [doug2k1](https://github.com/doug2k1)
