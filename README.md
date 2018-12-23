@@ -11,12 +11,12 @@ Minimalist static site generator, powered by  [Node.js](https://nodejs.org/en/) 
 * Allow partials (blocks of reusable interface components)
 
 #### mcadgen expands upon nanogen with the following:
-* copies local media to exact locations in the build process
-* `page` is available in your template to get access to the current page's front matter & a list of local media as absolute files.
-* generates a `pages` object, available in your template, containing all of the pages definitions across the entire site. The `pages` object has a few reserved keys you should not use in your front matter (they will be overwritten)
-    * `url` – the url to the page
-    * `media` – an array of absolute paths to the media files associated with each page
-    * `depth` – the depth of each page in the folder structure
+* copies local media to exact locations in the build process (inside subdirectories on a page by page basis)
+* `page` is available in your template to get access to the current page's front matter & a list of local media as root relative absolute file paths.
+* generates a `pages` array, available in your template, containing json objects for each of the page definitions across the entire site. The `pages` objects has a few reserved keys you should not use in your front matter (they will be overwritten).
+    * `url` – the root relative absolute url to the page
+    * `media` – an array of root relative absolute paths to the media files associated with the page
+    * `depth` – the depth of the page in the folder structure
 
 ## Getting started
 
