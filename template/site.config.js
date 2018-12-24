@@ -4,6 +4,6 @@ module.exports = {
     outputPath: './public'
   },
   site: {
-    title: 'Nanogen site'
+    title: 'MCADgen site'
   }
 };

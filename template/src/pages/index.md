@@ -1,5 +1,5 @@
 ---
-title: MCADgen setup
+title: MCADgen site
 
 ---
 
