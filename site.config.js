@@ -4,7 +4,7 @@ module.exports = {
     outputPath: './public'
   },
   site: {
-    title: 'MCADgen',
+    title: 'arcgen',
     description: 'Minimalist static site generator in Node.js'
     }
 };

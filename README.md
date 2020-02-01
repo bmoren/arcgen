@@ -1,8 +1,8 @@
-# mcadgen
+# arcgen
 
-[![npm](https://img.shields.io/npm/v/mcadgen.svg)](https://www.npmjs.com/package/mcadgen)
+Minimalist static site generator, powered by  [Node.js](https://nodejs.org/en/) & [nanogen](https://github.com/doug2k1/nanogen/)
 
-Minimalist static site generator, powered by  [Node.js](https://nodejs.org/en/) & [nanogen](https://github.com/doug2k1/nanogen/) for use in [MCAD](http://mcad.edu) web & screen classes.
+This version has a focus on archiving original media, meaning it has tools to re-format media allowing for originals to live along side compressed versions.
 
 ## Features
 * Generate HTML pages from [EJS](http://ejs.co/) and/or Markdown files.
@@ -10,7 +10,7 @@ Minimalist static site generator, powered by  [Node.js](https://nodejs.org/en/) 
 * It can read site metadata from a global file and have specific data for individual pages.
 * Allow partials (blocks of reusable interface components)
 
-#### mcadgen expands upon nanogen with the following:
+#### arcgen expands upon nanogen/mcadgen with the following:
 * copies local media to exact locations in the build process (inside subdirectories on a page by page basis)
 * `page` is available in your template to get access to the current page's front matter & a list of local media as root relative absolute file paths.
 * generates a `pages` array, available in your template, containing json objects for each of the page definitions across the entire site. The `pages` objects has a few reserved keys you should not use in your front matter (they will be overwritten).
@@ -29,13 +29,13 @@ Minimalist static site generator, powered by  [Node.js](https://nodejs.org/en/) 
 You may install it globally with:
 
 ```
-npm i -g mcadgen
+npm i -g arcgen
 ```
 
 Or run the cli directly with npx (available with npm 5.2 or above):
 
 ```
-npx mcadgen <command>
+npx arcgen <command>
 ```
 
 ### Creating a new site
@@ -43,7 +43,7 @@ npx mcadgen <command>
 To create a brand new site, navigate to the folder you want your site to be and run:
 
 ```
-mcadgen init
+arcgen init
 ```
 
 This will create a initial site structure like this:
@@ -61,7 +61,7 @@ This will create a initial site structure like this:
 To build the site and open it in a browser, run:
 
 ```
-mcadgen start
+arcgen start
 ```
 
 There is already a default layout inside the `layouts` folder, but you may add more.
@@ -74,48 +74,35 @@ Read more about [Pages](https://doug2k1.github.io/nanogen/docs/#pages).
 
 ## Available commands and options
 
-You may run `mcadgen -h` to see the available commands and options:
+You may run `arcgen -h` to see the available commands and options:
 
 ```
   Initialize a new site:
 
-    $ mcadgen init
+    $ arcgen init
 
   Start the current site:
 
-    $ mcadgen start [options]
+    $ arcgen start [options]
 
   Build the current site:
 
-    $ mcadgen build [options]
+    $ arcgen build [options]
 
   Options
     -c, --config <file-path>  Path to the config file (default: site.config.js)
     -p, --port <port-number>  Port to use for local server (default: 3000)
 
     -h, --help                Display this help text
-    -v, --version             Display mcadgen version
+    -v, --version             Display arcgen version
 ```
 
 ## Docs
 
 [Read the full documentation for nanogen](https://doug2k1.github.io/nanogen)
 
-## Running from a sub directory
-MCADgen is intended to be used at the root of your site '/'. It's not advised but you can use it in a sub directory with the following steps:
-+ upload your files to a subdirectory
-+ [create a .htaccess file](https://teamtreehouse.com/library/how-to-create-and-edit-an-htaccess-file) (or modify the existing one) at the root subdirectory
-+ add the rewrite settings below, while changing the subdirectory name (`coolsite`) to the appropriate sub directory name, and changing the url to your own url including the sub directory.
-
-```
-RewriteEngine on
-
-RewriteCond %{HTTP_REFERER} ^http://mygreaturl.com/coolsite/
-RewriteCond %{REQUEST_URI} !^/coolsite/
-RewriteRule (.*) /coolsite/$1 [L,QSA]
-```
-
 ## Authors
+* **Ben Moren** – arcgen
 * **Derek Anderson && Ben Moren** – mcadgen
 * **Douglas Matoso** - *Initial work* - [doug2k1](https://github.com/doug2k1)
 
