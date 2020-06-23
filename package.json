@@ -1,12 +1,12 @@
 {
   "name": "arcgen",
-  "version": "0.0.0",
-  "description": "Static site generator with content archiving in mind",
-  "repository": "https://github.com/mediaupstream/nanogen/tree/page-defs-plus-specific-media",
+  "version": "0.0.1",
+  "description": "Static site generator with full resolution content archiving in mind",
+  "repository": "https://github.com/bmoren/arcgen",
   "keywords": [
     "static site generator"
   ],
-  "author": "Ben Moren & Derek Anderson",
+  "author": "Ben Moren",
   "license": "MIT",
   "main": "./lib/index.js",
   "bin": {
