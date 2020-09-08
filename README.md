@@ -59,28 +59,46 @@ This will create a initial site structure like this:
 
 There is already a default layout inside the `layouts` folder, but you may add more.
 
-Inside the `pages` folder is where you put md and media files that will generate the pages of the final site. Any file name and folder structure used here will be transposed to the resulting site.
+Inside the `pages` folder is where you put .md and media files that will generate the pages of the final site. Any file name and folder structure used here will be transposed to the resulting site.
 
-### Build the site and open it in a browser
+
+### Build the current site and open with a live reload server:
 
 ```
-arcgen start
+$ arcgen start [options]
+```
+#### options:
+* `-i`, `--imagecompress` <boolean>  EXPERIMENTAL: run the srcset web ready image compressor (can take all of the compression flags below) 
+* `-c`, `--config` <file-path> Path to the config file (default: site.config.js)
+* `-p`, `--port` <port-number>  Port to use for local server (default: 3000)
+
+
+### Build the current site without a server:
+```
+$ arcgen build [options]
+```
+Same options as start.
+
+### generate srcset compressed & optimized images:
+This feature will take all source images and create 3 versions at smaller sizes and place them into a specificed subdirectory.
+
+It's likely a better idea to do this before building or starting the site as a 2 step process since it's unlikely you will need to re-compress images regularily. Skips existing image files, you'll need to manually delete sub directories / images to re-compress images again. A deletion feature may be added in the future.
+```
+$ arcgen compress [options]
 ```
 
-### compressing and generating web-ready images
-```
-arcgen compress
-```
+#### options:
+* `-t`, `--type` <image-file-extension>  Force the image type for the compression, none respects the original filetype .jpg | .png | .webp | none (default: none)
+* `-d`, `--directory` <file-path>        Set the path for compressed images to be saved to (default: /srcset)
+* `-s`, `--maxsize` <integer>            Set the maximum image size in pixels, srcset will be divided down from this (default: 2000)
+* `-q`, `--quality` <integer>            Set the quality of the image exports; 1-100. Image type dependent. (default: 100)
 
-There are many options for compression, please run the help to see them all.
+### arcgen global options
 
-by default arcgen generates and looks for a `srcset` folder and will make this available inside the media array.
+* `-h`, `--help`     Display the help text in the terminal
+* `-v`, `--version`  Display arcgen version
 
-## Available commands and options
-
-Please run `arcgen -h` to see the most updated available commands and options.
-
-## Docs
+## Docs & examples
 
 coming soon?
 
