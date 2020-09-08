@@ -4,20 +4,23 @@ Minimalist static site generator, powered by  [Node.js](https://nodejs.org/en/) 
 
 This version has a focus on archiving original media, meaning it has tools to re-format media allowing for originals to live along side compressed versions.
 
+more documentation and template recipe examples coming soon!
+
 ## Features
 * Generate HTML pages from Markdown files.
 * EJS templates files
-* Support for site metadata from a global file and specific data for individual pages.
+* Support for site metadata from a global file and specific data for individual pages via YAML frontmatter.
 * Support for partials, blocks of reusable interface components.
 * Compression and Generation of web-ready srcset images from full res images.
+* Copies local media to exact locations in the build process, inside subdirectories and on a page by page basis
+* Support for page ordering using `00_` style numbered filename prefixes, the prefixes will be removed from filenames on build to keep paths tidy.
+* A `page` JSON object, available in your template, to get access to the current page's YAML front matter and the keys outlined below.
+* A `pages` array, available in your template, containing json objects for each of the page definitions across the entire site. (useful for navigation and collections) 
 
-#### arcgen expands upon nanogen with the following:
-* copies local media to exact locations in the build process (inside subdirectories on a page by page basis)
-* `page` is available in your template to get access to the current page's front matter & a list of local media as root relative absolute file paths.
-* generates a `pages` array, available in your template, containing json objects for each of the page definitions across the entire site. The `pages` objects has a few reserved keys you should not use in your front matter (they will be overwritten).
+The `page` & `pages` objects have a few reserved keys you should not use in your front matter (they will be overwritten).
     * `url` – the root relative absolute url to the page
     * `media` – an array of root relative absolute paths to the media files associated with the page
-    * `depth` – the depth of the page in the folder structure
+    * `depth` – the depth of the page in the orginizational folder structure
     * `parent` – the parent of the current page in the folder structure
 
 ## Getting started
