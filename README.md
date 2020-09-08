@@ -11,7 +11,7 @@ This version has a focus on archiving original media, meaning it has tools to re
 * Support for partials, blocks of reusable interface components.
 * Compression and Generation of web-ready srcset images from full res images.
 
-#### arcgen expands upon nanogen/mcadgen with the following:
+#### arcgen expands upon nanogen with the following:
 * copies local media to exact locations in the build process (inside subdirectories on a page by page basis)
 * `page` is available in your template to get access to the current page's front matter & a list of local media as root relative absolute file paths.
 * generates a `pages` array, available in your template, containing json objects for each of the page definitions across the entire site. The `pages` objects has a few reserved keys you should not use in your front matter (they will be overwritten).
