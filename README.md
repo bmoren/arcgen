@@ -18,10 +18,10 @@ more documentation and template recipe examples coming soon!
 * A `pages` array, available in your template, containing json objects for each of the page definitions across the entire site. (useful for navigation and collections) 
 
 The `page` & `pages` objects have a few reserved keys you should not use in your front matter (they will be overwritten).
-    * `url` – the root relative absolute url to the page
-    * `media` – an array of root relative absolute paths to the media files associated with the page
-    * `depth` – the depth of the page in the orginizational folder structure
-    * `parent` – the parent of the current page in the folder structure
+  * `url` – the root relative absolute url to the page
+  * `media` – an array of root relative absolute paths to the media files associated with the page
+  * `depth` – the depth of the page in the orginizational folder structure
+  * `parent` – the parent of the current page in the folder structure
 
 ## Getting started
 
