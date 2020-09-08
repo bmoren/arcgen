@@ -11,11 +11,11 @@ more documentation and template recipe examples coming soon!
 * EJS templates files
 * Support for site metadata from a global file and specific data for individual pages via YAML frontmatter.
 * Support for partials, blocks of reusable interface components.
-* Compression and Generation of web-ready srcset images from full res images.
+* Compression and generation of web-ready srcset images from full res images.
 * Copies local media to exact locations in the build process, inside subdirectories and on a page by page basis
 * Support for page ordering using `00_` style numbered filename prefixes, the prefixes will be removed from filenames on build to keep paths tidy.
 * A `page` JSON object, available in your template, to get access to the current page's YAML front matter and the keys outlined below.
-* A `pages` array, available in your template, containing json objects for each of the page definitions across the entire site. (useful for navigation and collections) 
+* A `pages` array, available in your template, containing json objects for each of the `page` definitions across the entire site. (useful for navigation and collections) 
 
 The `page` & `pages` objects have a few reserved keys you should not use in your front matter (they will be overwritten).
   * `url` – the root relative absolute url to the page
