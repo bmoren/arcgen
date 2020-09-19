@@ -1,6 +1,6 @@
 {
   "name": "arcgen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Static site generator with full resolution content archiving in mind",
   "repository": "https://github.com/bmoren/arcgen",
   "keywords": [

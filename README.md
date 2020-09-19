@@ -68,7 +68,7 @@ Inside the `pages` folder is where you put .md and media files that will generat
 $ arcgen start [options]
 ```
 #### options:
-* `-i`, `--imagecompress` <boolean>  EXPERIMENTAL: run the srcset web ready image compressor (can take all of the compression flags below) 
+* `-i`, `--imagecompress` <boolean>  EXPERIMENTAL: run the srcset web ready image compressor (can take all of the compression flags below). Not advised to run image compression with the live server, it will attempt to re-compress images when it notices file changes... may cause unexpected loops to occur.
 * `-c`, `--config` <file-path> Path to the config file (default: site.config.js)
 * `-p`, `--port` <port-number>  Port to use for local server (default: 3000)
 
@@ -103,9 +103,9 @@ $ arcgen compress [options]
 coming soon?
 
 ## Authors
-* **Ben Moren** – arcgen
-* **Derek Anderson && Ben Moren** – mcadgen
-* **Douglas Matoso** - *Initial work* - [doug2k1](https://github.com/doug2k1)
+* [Ben Moren](https://github.com/bmoren) – arcgen
+* [Derek Anderson](https://github.com/mediaupstream) & [Ben Moren](https://github.com/bmoren) – mcadgen
+* [Douglas Matoso](https://github.com/doug2k1) - nanogen 
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
