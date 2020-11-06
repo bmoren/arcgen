@@ -62,45 +62,54 @@ There is already a default layout inside the `layouts` folder, but you may add m
 Inside the `pages` folder is where you put .md and media files that will generate the pages of the final site. Any file name and folder structure used here will be transposed to the resulting site.
 
 
-### Build the current site and open with a live reload server:
+### Build the current site and open with a live reload server
+builds the site from the `srcPath` specified in `site.config.js` and launches a live reload server.
 
 ```
 $ arcgen start [options]
 ```
-#### options:
-* `-i`, `--imagecompress` <boolean>  EXPERIMENTAL: run the srcset web ready image compressor (can take all of the compression flags below). Not advised to run image compression with the live server, it will attempt to re-compress images when it notices file changes... may cause unexpected loops to occur.
+#### options
 * `-c`, `--config` <file-path> Path to the config file (default: site.config.js)
 * `-p`, `--port` <port-number>  Port to use for local server (default: 3000)
 
 
-### Build the current site without a server:
+### Build the current site without a server
+builds the site from the `srcPath` specified in `site.config.js` 
+
 ```
 $ arcgen build [options]
 ```
 Same options as start.
 
-### generate srcset compressed & optimized images:
-This feature will take all source images and create 3 versions at smaller sizes and place them into a specificed subdirectory.
 
-It's likely a better idea to do this before building or starting the site as a 2 step process since it's unlikely you will need to re-compress images regularily. Skips existing image files, you'll need to manually delete sub directories / images to re-compress images again. A deletion feature may be added in the future.
+### generate srcset compressed & optimized images
+This feature will take all source images and create three versions at smaller sizes and place them into a specified subdirectory. Do this before building or starting the site as a two step process since it's unlikely you will need to re-compress images regularly, and is a significant resource drain.
+
 ```
 $ arcgen compress [options]
 ```
-
-#### options:
+#### options
 * `-t`, `--type` <image-file-extension>  Force the image type for the compression, none respects the original filetype .jpg | .png | .webp | none (default: none)
 * `-d`, `--directory` <file-path>        Set the path for compressed images to be saved to (default: /srcset)
 * `-s`, `--maxsize` <integer>            Set the maximum image size in pixels, srcset will be divided down from this (default: 2000)
 * `-q`, `--quality` <integer>            Set the quality of the image exports; 1-100. Image type dependent. (default: 100)
+
+
+
+### Batch delete srcset subdirectories
+deletes folder and all contents recursively in the `srcPath` directory.
+```
+$ arcgen clean [options]
+```
+#### options
+* `-d`, `--directory` <file-path>        subdirectory to search for and delete. (default: /srcset)
+
 
 ### arcgen global options
 
 * `-h`, `--help`     Display the help text in the terminal
 * `-v`, `--version`  Display arcgen version
 
-## Docs & examples
-
-coming soon?
 
 ## Authors
 * [Ben Moren](https://github.com/bmoren) – arcgen
