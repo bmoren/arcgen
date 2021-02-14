@@ -92,7 +92,7 @@ $ arcgen compress [options]
 * `-t`, `--type` <image-file-extension>  Force the image type for the compression, none respects the original filetype .jpg | .png | .webp | none (default: none)
 * `-d`, `--directory` <file-path>        Set the path for compressed images to be saved to (default: /srcset)
 * `-s`, `--maxsize` <integer>            Set the maximum image size in pixels, srcset will be divided down from this (default: 2000)
-* `-q`, `--quality` <integer>            Set the quality of the image exports; 1-100. Image type dependent. (default: 100)
+* `-q`, `--quality` <integer>            Set the quality of the image exports; 1-100. Image type dependent. (default: 80)
 
 
 
@@ -115,6 +115,3 @@ $ arcgen clean [options]
 * [Ben Moren](https://github.com/bmoren) – arcgen
 * [Derek Anderson](https://github.com/mediaupstream) & [Ben Moren](https://github.com/bmoren) – mcadgen
 * [Douglas Matoso](https://github.com/doug2k1) - nanogen 
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
